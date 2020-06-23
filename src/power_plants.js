@@ -14,6 +14,7 @@
 let plant = {water: 0, soil: 0, light:0}
 
 // This is a function factory which can create more specific functions to alter a plant's soil, water & light. We can also use it to change the state on many different 'props' (properties) throughout our application.
+
 const changeState = (prop) => {
   return (value) => {
     return (state) => ({
@@ -37,3 +38,18 @@ const stateChanger = storeState();
 const feed = changeState("soil");
 const hydrate = changeState("water");
 const giveLight = changeState("light");
+
+
+// node command for using lodash
+// var _ = require('lodash');
+const thingS = _.cloneDeep(thing);
+const clonedeep = require('lodash.clonedeep');
+const objectCopy = clonedeep(originalObject);
+
+
+const thing = {
+  subthing : {
+    color: "red",
+    number: 1
+  }
+}
